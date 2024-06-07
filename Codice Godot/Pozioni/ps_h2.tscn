@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnv73kw58gewm"]
+
+[ext_resource type="Texture2D" uid="uid://6wllioacv52e" path="res://Pozioni/potions_preview2_8.png" id="1_7op1t"]
+
+[node name="PS-H2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7op1t")
+region_enabled = true
+region_rect = Rect2(296, 192, 32, 48)

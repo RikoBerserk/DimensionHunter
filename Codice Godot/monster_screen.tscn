@@ -1,0 +1,285 @@
+[gd_scene load_steps=7 format=3 uid="uid://b2f2rnx5breq2"]
+
+[ext_resource type="Script" path="res://monster_screen.gd" id="1_c6uis"]
+[ext_resource type="Texture2D" uid="uid://bh8f34fgy4j6n" path="res://Effetti/pixil-frame-0 (3).png" id="2_3108l"]
+[ext_resource type="Texture2D" uid="uid://dnuwmtojsqxfv" path="res://Effetti/Dialoghi/free-to-use-nine-patch-rect-textures-v0-jlv0yj89wj1a1.webp" id="3_cimmb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4rlc2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ryu8e"]
+bg_color = Color(0.364706, 1, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_u7qem"]
+font_size = 17
+font_color = Color(0, 0, 0, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[node name="MonsterScreen" type="Node2D"]
+script = ExtResource("1_c6uis")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 2.0
+offset_right = 1280.0
+offset_bottom = 1029.0
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_3108l")
+
+[node name="Monster party 1" type="VBoxContainer" parent="."]
+offset_left = 47.0
+offset_top = 54.0
+offset_right = 542.0
+offset_bottom = 139.0
+alignment = 1
+
+[node name="Button" type="Button" parent="Monster party 1"]
+custom_minimum_size = Vector2(495, 85)
+layout_mode = 2
+focus_neighbor_right = NodePath("../../Monster party 2/Button")
+focus_neighbor_bottom = NodePath("../../Monster party 3/Button")
+
+[node name="Monster party 2" type="VBoxContainer" parent="."]
+offset_left = 599.0
+offset_top = 94.0
+offset_right = 1094.0
+offset_bottom = 179.0
+alignment = 1
+
+[node name="Button" type="Button" parent="Monster party 2"]
+custom_minimum_size = Vector2(495, 85)
+layout_mode = 2
+focus_neighbor_left = NodePath("../../Monster party 1/Button")
+focus_neighbor_bottom = NodePath("../../Monster party 4/Button")
+
+[node name="Monster party 3" type="VBoxContainer" parent="."]
+offset_left = 49.0
+offset_top = 196.0
+offset_right = 544.0
+offset_bottom = 281.0
+alignment = 1
+
+[node name="Button" type="Button" parent="Monster party 3"]
+custom_minimum_size = Vector2(495, 85)
+layout_mode = 2
+focus_neighbor_top = NodePath("../../Monster party 1/Button")
+focus_neighbor_right = NodePath("../../Monster party 4/Button")
+focus_neighbor_bottom = NodePath("../../Monster party 5/Button")
+
+[node name="Monster party 4" type="VBoxContainer" parent="."]
+offset_left = 599.0
+offset_top = 231.0
+offset_right = 1094.0
+offset_bottom = 316.0
+alignment = 1
+
+[node name="Button" type="Button" parent="Monster party 4"]
+custom_minimum_size = Vector2(495, 85)
+layout_mode = 2
+focus_neighbor_left = NodePath("../../Monster party 3/Button")
+focus_neighbor_top = NodePath("../../Monster party 2/Button")
+focus_neighbor_bottom = NodePath("../../Monster party 6/Button")
+
+[node name="Monster party 5" type="VBoxContainer" parent="."]
+offset_left = 50.0
+offset_top = 335.0
+offset_right = 545.0
+offset_bottom = 420.0
+alignment = 1
+
+[node name="Button" type="Button" parent="Monster party 5"]
+custom_minimum_size = Vector2(495, 85)
+layout_mode = 2
+focus_neighbor_top = NodePath("../../Monster party 3/Button")
+focus_neighbor_right = NodePath("../../Monster party 6/Button")
+
+[node name="Monster party 6" type="VBoxContainer" parent="."]
+offset_left = 600.0
+offset_top = 368.0
+offset_right = 1095.0
+offset_bottom = 453.0
+alignment = 1
+
+[node name="Button" type="Button" parent="Monster party 6"]
+custom_minimum_size = Vector2(495, 85)
+layout_mode = 2
+focus_neighbor_left = NodePath("../../Monster party 5/Button")
+focus_neighbor_top = NodePath("../../Monster party 4/Button")
+
+[node name="Monster 1" type="Node2D" parent="."]
+position = Vector2(501, 81)
+
+[node name="Monster 2" type="Node2D" parent="."]
+position = Vector2(1086, 103)
+
+[node name="Monster 3" type="Node2D" parent="."]
+position = Vector2(101, 228)
+
+[node name="Monster 4" type="Node2D" parent="."]
+position = Vector2(642, 267)
+
+[node name="Monster 5" type="Node2D" parent="."]
+position = Vector2(492, 361)
+
+[node name="Monster 6" type="Node2D" parent="."]
+position = Vector2(1069, 398)
+
+[node name="Info 1" type="Label" parent="."]
+visible = false
+offset_left = 64.0
+offset_top = 68.0
+offset_right = 386.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "monster lv.90"
+
+[node name="Info 2" type="Label" parent="."]
+visible = false
+offset_left = 616.0
+offset_top = 106.0
+offset_right = 938.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "monster lv.90"
+
+[node name="Info 3" type="Label" parent="."]
+visible = false
+offset_left = 196.0
+offset_top = 206.0
+offset_right = 518.0
+offset_bottom = 233.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "monster lv.90"
+
+[node name="Info 4" type="Label" parent="."]
+visible = false
+offset_left = 756.0
+offset_top = 246.0
+offset_right = 1078.0
+offset_bottom = 273.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "monster lv.90"
+
+[node name="Info 5" type="Label" parent="."]
+visible = false
+offset_left = 70.0
+offset_top = 345.0
+offset_right = 392.0
+offset_bottom = 372.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "monster lv.90"
+
+[node name="Info 6" type="Label" parent="."]
+visible = false
+offset_left = 617.0
+offset_top = 383.0
+offset_right = 939.0
+offset_bottom = 410.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "monster lv.90"
+
+[node name="HPBar 1" type="ProgressBar" parent="."]
+visible = false
+offset_left = 63.0
+offset_top = 104.0
+offset_right = 371.0
+offset_bottom = 125.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_4rlc2")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ryu8e")
+value = 100.0
+show_percentage = false
+
+[node name="HPBar 2" type="ProgressBar" parent="."]
+visible = false
+offset_left = 616.0
+offset_top = 137.0
+offset_right = 924.0
+offset_bottom = 158.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_4rlc2")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ryu8e")
+value = 100.0
+show_percentage = false
+
+[node name="HPBar 3" type="ProgressBar" parent="."]
+visible = false
+offset_left = 198.0
+offset_top = 239.0
+offset_right = 506.0
+offset_bottom = 260.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_4rlc2")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ryu8e")
+value = 100.0
+show_percentage = false
+
+[node name="HPBar 4" type="ProgressBar" parent="."]
+visible = false
+offset_left = 757.0
+offset_top = 280.0
+offset_right = 1065.0
+offset_bottom = 301.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_4rlc2")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ryu8e")
+value = 100.0
+show_percentage = false
+
+[node name="HPBar 5" type="ProgressBar" parent="."]
+visible = false
+offset_left = 68.0
+offset_top = 378.0
+offset_right = 376.0
+offset_bottom = 399.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_4rlc2")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ryu8e")
+value = 100.0
+show_percentage = false
+
+[node name="HPBar 6" type="ProgressBar" parent="."]
+visible = false
+offset_left = 618.0
+offset_top = 415.0
+offset_right = 926.0
+offset_bottom = 436.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_4rlc2")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ryu8e")
+value = 100.0
+show_percentage = false
+
+[node name="TextIntro" type="NinePatchRect" parent="."]
+offset_left = 26.0
+offset_top = 490.0
+offset_right = 788.0
+offset_bottom = 625.0
+texture = ExtResource("3_cimmb")
+region_rect = Rect2(4, 400, 128, 128)
+patch_margin_left = 32
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 32
+
+[node name="Label" type="Label" parent="TextIntro"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 17.0
+offset_right = 344.0
+offset_bottom = 120.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "
+	"
+label_settings = SubResource("LabelSettings_u7qem")
+
+[node name="Label2" type="Label" parent="TextIntro"]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 17.0
+offset_right = 731.0
+offset_bottom = 120.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "
+	"
+label_settings = SubResource("LabelSettings_u7qem")
+
+[connection signal="pressed" from="Monster party 1/Button" to="." method="_on_button_pressed" binds= [0]]
+[connection signal="pressed" from="Monster party 2/Button" to="." method="_on_button_pressed" binds= [1]]
+[connection signal="pressed" from="Monster party 3/Button" to="." method="_on_button_pressed" binds= [2]]
+[connection signal="pressed" from="Monster party 4/Button" to="." method="_on_button_pressed" binds= [3]]
+[connection signal="pressed" from="Monster party 5/Button" to="." method="_on_button_pressed" binds= [4]]
+[connection signal="pressed" from="Monster party 6/Button" to="." method="_on_button_pressed" binds= [5]]

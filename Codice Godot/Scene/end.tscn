@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://kiyore703u6v"]
+
+[ext_resource type="Script" path="res://Scene/end.gd" id="1_pdk3p"]
+[ext_resource type="Texture2D" uid="uid://bu3s822p1lp53" path="res://Storia/Dimension Hunter 800x600 (1).jpg" id="2_1wjj7"]
+[ext_resource type="Texture2D" uid="uid://bystd04bk4b3n" path="res://Storia/_5ab1e815-6248-4d4e-b2b2-165a52458b4c.jpeg" id="3_1d8il"]
+[ext_resource type="Texture2D" uid="uid://dh1xknp0kyg4b" path="res://Storia/Dimension Hunter (2).png" id="4_l7rnl"]
+
+[node name="End" type="Node2D"]
+script = ExtResource("1_pdk3p")
+
+[node name="DimensionHunter800x600(1)" type="Sprite2D" parent="."]
+position = Vector2(575.125, 324.375)
+scale = Vector2(1.45219, 1.08542)
+texture = ExtResource("2_1wjj7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(569, 354)
+scale = Vector2(0.624023, 0.688477)
+texture = ExtResource("3_1d8il")
+
+[node name="GridContainer2" type="GridContainer" parent="Sprite2D"]
+offset_left = 546.454
+offset_top = 286.139
+offset_right = 664.454
+offset_bottom = 325.139
+scale = Vector2(3, 3)
+
+[node name="Button" type="Button" parent="Sprite2D/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "CONTINUA"
+
+[node name="DimensionHunter(2)" type="Sprite2D" parent="."]
+position = Vector2(127, 69.25)
+scale = Vector2(0.475556, 0.481366)
+texture = ExtResource("4_l7rnl")
+
+[connection signal="pressed" from="Sprite2D/GridContainer2/Button" to="." method="_on_continua_pressed"]

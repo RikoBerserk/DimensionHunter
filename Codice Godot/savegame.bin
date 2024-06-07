@@ -1,0 +1,1 @@
+{"0":{"Attacks":{"0":{"Category":"sasso","Damage":1.1,"Name":"attacco1","Target":"Monster"},"1":{"Category":"carta","Damage":1.2,"Name":"attacco2","Target":"Monster"},"2":{"Category":"forbice","Damage":1.3,"Name":"attacco3","Target":"Monster"}},"Exp":0,"Health":30,"Level":3,"MaxExp":10,"MaxHealth":30,"Name":"Meownster","Scene":"<PackedScene#-9223372010179001136>","Strenght":10}}

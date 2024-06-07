@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://s4dukqwu2lrj"]
+
+[sub_resource type="GDScript" id="GDScript_pje4d"]
+script/source = "extends Area2D
+
+var battle =\"res://Battle scene/battle.tscn\"
+
+
+func _on_body_entered(body):
+	if \"Player\" in body.name:
+		
+		$\"../UI/AnimationPlayer\".play(\"transitionIn\")
+		await get_tree().create_timer(1.5).timeout
+		var x = $\"../Player\".position.x
+		var y = $\"../Player\".position.y
+		SceneSwitcher.switch_scene(battle, x, y)
+		queue_free()
+		$\"../UI/AnimationPlayer\".play(\"transitionOut\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbi1p"]
+size = Vector2(46, 39)
+
+[node name="Area2D" type="Area2D"]
+script = SubResource("GDScript_pje4d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(13, 9.5)
+shape = SubResource("RectangleShape2D_tbi1p")
