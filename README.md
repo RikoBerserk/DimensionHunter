@@ -1,3 +1,3 @@
 # DimensionHunter
 
-Progetto per Sviluppo di Videogiochi
+Progetto per Sviluppo di Videogiochi, prof. Pierpaolo Basile
